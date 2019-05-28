@@ -1,0 +1,6 @@
+name: MangoWorld
+version: 1
+description: mw plugin pog
+author: FloM77
+main: mangoworld.Main
+api-version: 1.14
