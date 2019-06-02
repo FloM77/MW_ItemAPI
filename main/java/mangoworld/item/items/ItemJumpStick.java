@@ -6,15 +6,15 @@ import org.bukkit.event.player.PlayerInteractEvent;
 
 import java.util.ArrayList;
 
-public class itemJumpStick extends ItemBase {
-    protected itemJumpStick() {
+public class ItemJumpStick extends ItemBase {
+    protected ItemJumpStick() {
         super("Jump Stick", new ArrayList<String>() {{ add("It's very light"); }}, Material.STICK);
     }
 
-    public static final itemJumpStick item = new itemJumpStick();
+    public static final ItemJumpStick item = new ItemJumpStick();
 
     @Override
-    protected void onRightClick(PlayerInteractEvent e) {
+    public void onRightClick(PlayerInteractEvent e) {
         e.getPlayer().setVelocity(e.getPlayer().getVelocity().add(e.getPlayer().getLocation().getDirection().multiply(1.5)));
     }
 }

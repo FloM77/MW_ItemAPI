@@ -7,15 +7,15 @@ import org.bukkit.event.player.PlayerInteractEvent;
 
 import java.util.ArrayList;
 
-public class itemHealthStone extends ItemBase {
-    protected itemHealthStone() {
+public class ItemHealthStone extends ItemBase {
+    protected ItemHealthStone() {
         super("Health Stone", new ArrayList<String>() {{add("Restores 2 health");}}, Material.REDSTONE);
     }
 
-    public static final itemHealthStone item = new itemHealthStone();
+    public static final ItemHealthStone item = new ItemHealthStone();
 
     @Override
-    protected void onRightClick(PlayerInteractEvent e) {
+    public void onRightClick(PlayerInteractEvent e) {
         double newVal = e.getPlayer().getHealth() + 4d;
         e.getPlayer().setHealth(
                 (newVal > e.getPlayer().getHealthScale()) ? e.getPlayer().getHealthScale() : newVal
